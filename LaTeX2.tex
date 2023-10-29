@@ -1,0 +1,303 @@
+\documentclass[]{article}
+
+%These tell TeX which packages to use.
+\usepackage{array,epsfig}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsxtra}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{color}
+\usepackage[latin1]{inputenc}
+\usepackage[cyr]{aeguill}
+\usepackage[francais]{babel}
+%Here I define some theorem styles and shortcut commands for symbols I use often
+\theoremstyle{definition}
+\newtheorem{defn}{Définition}
+\newtheorem{thm}{Théorème}
+\newtheorem{cor}{Corollary}
+\newtheorem*{rmk}{Remarque}
+\newtheorem{lem}{Lemma}
+\newtheorem*{joke}{Joke}
+\newtheorem{ex}{Exemple}
+\newtheorem*{soln}{Solution}
+\newtheorem{prop}{Proposition}
+\newtheorem{exo}{Exercice}
+
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\surj}{\twoheadrightarrow}
+\newcommand{\graph}{\mathrm{graph}}
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\Z}{\bb{Z}}
+\newcommand{\Q}{\bb{Q}}
+\newcommand{\R}{\bb{R}}
+\newcommand{\C}{\bb{C}}
+\newcommand{\N}{\bb{N}}
+\newcommand{\M}{\mathbf{M}}
+\newcommand{\m}{\mathbf{m}}
+\newcommand{\MM}{\mathscr{M}}
+\newcommand{\HH}{\mathscr{H}}
+\newcommand{\Om}{\Omega}
+\newcommand{\Ho}{\in\HH(\Om)}
+\newcommand{\bd}{\partial}
+\newcommand{\del}{\partial}
+\newcommand{\bardel}{\overline\partial}
+\newcommand{\textdf}[1]{\textbf{\textsf{#1}}\index{#1}}
+\newcommand{\img}{\mathrm{img}}
+\newcommand{\ip}[2]{\left\langle{#1},{#2}\right\rangle}
+\newcommand{\inter}[1]{\mathrm{int}{#1}}
+\newcommand{\exter}[1]{\mathrm{ext}{#1}}
+\newcommand{\cl}[1]{\mathrm{cl}{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\vol}{\mathrm{vol}}
+\newcommand{\cnt}{\mathrm{ct}}
+\newcommand{\osc}{\mathrm{osc}}
+\newcommand{\LL}{\mathbf{L}}
+\newcommand{\UU}{\mathbf{U}}
+\newcommand{\support}{\mathrm{support}}
+\newcommand{\AND}{\;\wedge\;}
+\newcommand{\OR}{\;\vee\;}
+\newcommand{\Oset}{\varnothing}
+\newcommand{\st}{\ni}
+\newcommand{\wh}{\widehat}
+
+%Pagination stuff.
+\setlength{\topmargin}{-.3 in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textheight}{9.in}
+\setlength{\textwidth}{6.5in}
+\pagestyle{empty}
+
+
+
+\begin{document}
+
+
+\begin{center}
+{\Large Physique Des Ondes}\\
+\textbf{GALLO Mathieu}\\ %You should put your name here
+\today %You should write the date here.
+\end{center}
+
+\vspace{0.2 cm}
+
+\section{Prélude Mathématiques}
+Dans cette partie on s'intéresse d'un point de vue mathématique aux fonctions définies sur les nombres réels de la forme 
+\begin{equation}
+\begin{align*}
+f(t) &= A_0 + \sum_{k=1}^{n}A_k \cos(2\pi \cdot k \cdot F \cdot t + \phi_k) \\
+&= A_0 + A_1 \cos(2\pi F \cdot t+ \phi_1) + \cdots + A_n \cos(2\pi \cdot n \cdot F \cdot t+ \phi_n)
+\end{align*}
+\end{equation}
+Pour un entier $n\geq 1$ , et des réels $F, A_0,\cdots A_n,\phi_1 ,\cdots, \phi_n$ avec $A_1$ non nul, et $F$ strictement positif\newline
+\begin{rmk}
+Dans votre cours vous ne traitez que deux cas particuliers de $(1)$ soit le cas:
+\begin{equation*}
+f(t) = A_0 + \sum_{k=1}^{n}A_k \cos(2\pi \cdot k \cdot F \cdot t)
+\end{equation*}
+
+Ou alors le cas :
+
+\begin{equation*}
+\begin{align*}
+f(t) &= A_0 + \sum_{k=1}^{n}A_k \cos(2\pi \cdot k \cdot F \cdot t - \frac{\pi}{2}) \\
+&= A_0 + \sum_{k=1}^{n}A_k \sin(2\pi \cdot k \cdot F \cdot t )
+\end{align*}
+\end{equation*}
+C'est à dire les cas $\phi_1=\phi_2=\cdots=\phi_n = 0$ (le cas avec que des cosinus) ou alors $\phi_1=\phi_2=\cdots=\phi_n = -\frac{\pi}{2}$ (le cas avec que des sinus en vertu de $\cos(a-\frac{\pi}{2})=\sin(a)$).
+\end{rmk}
+\begin{ex}
+\begin{equation*}
+f(t) = 1+\cos(2\pi\cdot t) - 2\cos(6\pi \cdot t+2)
+\end{equation*}
+Ici on identifie que $n = 3$ , $F=1$, $A_0=1$, $A_1=1$, $A_2=0$, $A_3=-2$  et tous les $\phi_i$ sont nuls sauf pour $i=3$ $\phi_3 = 2$.
+\end{ex}
+
+\subsection{Définitions}
+\begin{defn}
+Pour $f$ définie par $(1)$ on dit que 
+\begin{enumerate}
+\item[$\diamond$] $A_0$ est la \textbf{composante continue} de $f$.
+\item[$\diamond$] $A_1 \cos(2\pi\cdot F\cdot t+\phi_1)$ est \textbf{la fondamentale} de $f$
+\item [$\diamond$] $|A_1|$ est \textbf{l'amplitude de la fondamentale}.
+\item[$\diamond$] Pour $k\geq1$, $A_k\cos(2\pi\cdot k F\cdot t+\phi_k)$ est \textbf{l'harmonique de rang $k$} 
+\item[$\diamond$] Pour $k\geq1$, $|A_k|$ est \textbf{l'amplitude de l'harmonique de rang $k$}. 
+\end{enumerate}
+\end{defn}
+\begin{rmk}
+La fondamentale est l'harmonique de rang 1.
+\end{rmk}
+
+\begin{defn}
+Pour $f$ une fonction définie sur $\mathbb{R}$ périodique de période $T>0$. \newline On définit sa fréquence comme $\frac{1}{F}$.
+\end{defn}
+En utilisant les propriétés de la fonction cosinus (qui est périodique de période $2\pi$), on déduit le résultat suivant :
+\begin{prop}
+Pour $f$ définie par $(1)$ on a que:
+\begin{enumerate}
+\item[$\diamond$] $F$ est la \textbf{fréquence de la fondamentale}, donc la fondamentale est de période $\frac{1}{F}.$ 
+\item[$\diamond$] Pour $k\geq 2$, $k\cdot F$ est la \textbf{fréquence de l'harmonique de rang $k$}, donc l'harmonique de rang $k$ est de période $\frac{1}{kF}.$ 
+\end{enumerate}
+\end{prop}
+\begin{proof}
+Je vous laisse regarder. La question à laquelle vous devez répondre est : Quelle est la période de la fonction,
+\begin{equation*}
+\cos(2\pi\cdot kF \cdot t + \phi_k)
+\end{equation*}
+pour $k\geq 1$ un entier.
+\end{proof}
+\subsection{Exercices}
+
+\begin{exo} \textbf{C'est quoi une telle fonction ?}\newline 
+On considère $f$ définie par $(1)$.
+\begin{enumerate}
+\item[(i)] Montrez que $f(t+\frac{1}{F})=f(t)$.
+\newline \textit{$f$ est même périodique de période $\frac{1}{F}$. Ceci justifie l'appellation "fondamentale".}\newline\noindent
+\textbf{On retient que c'est le terme en $A_1$ qui impose la période de $f$ (ou la fréquence c'est pareil).}
+\item[(ii)] Montrez que $f$ peut se réécrire sous la forme :
+\begin{equation}
+f(t) = A_0 + \sum_{k=1}^{n}B_k \cos(2\pi \cdot k \cdot F \cdot t) + \sum_{k=1}^{n}C_k\sin(2\pi \cdot k \cdot F \cdot t)
+\end{equation}
+Où les $B_k$ et $C_k$ sont des réels. Et donnez une relation qui relie les $A_k,B_k$ et $C_k$ pour $k\geq 1$ \newline
+\textbf{Indication :} \textit{Pensez aux formules trigonométriques !} \newline
+\item[(iii)] Dessinez les fonctions suivantes sur $[-1,1]$, dans deux graphiques différents \textbf{l'un au dessus de l'autre}.
+\begin{equation*}
+f(t)=1+\cos(2\pi \cdot t)
+\end{equation*}
+\begin{equation*}
+g(t)=1+\cos(4\pi \cdot t)
+\end{equation*}
+Faites ensuite en dessous le dessin de la somme des deux ondes $h=f+g$. 
+\end{enumerate}
+\end{exo}
+
+\begin{exo} \textbf{$A_0$ et valeur moyenne}\newline
+Soit $f$ une fonction continue définie sur un intervalle $[a,b]$. On appele la moyenne de $f$ la quantité : $\frac{1}{b-a}\int_{a}^{b}{f(t)dt}$.\newline
+Montrez que la moyenne de $f$ définie par $(1)$ sur l'intervalle $[0, 1/F]$ est $A_0$.\newline
+\textit{On comprend donc que la composante continue de $f$ est la} \textbf{valeur moyenne} \textit{prise par $f$ sur une periode.}
+\end{exo}
+
+\begin{exo} \textbf{Applications}\newline
+ Ecrivez les fonctions suivantes sous la forme $(1)$ puis identifiez leurs valeurs moyennes, leurs fondamentales et leurs harmoniques. 
+\begin{enumerate}
+\item[(i)] Soit $f(t) = 3+ \cos(2\pi \cdot t) + \sin(\pi \cdot t)$
+\item[(ii)] Soit $f(t) = \cos^2(\pi t) + \cos(4\pi t)$ (attention au carré !)
+\end{enumerate}
+\end{exo}
+\subsection{Pourquoi on s'intéresse à ces fonctions ?}
+L'intérêt autour de ses fonctions vient du fait que si on a une fonction périodique "assez régulière" alors on peut l'approcher par une fonction de la forme (1). Plus précisément on a le théorème suivant :
+\begin{thm} (\textbf{Décomposition en série de Fourier})\newline
+Soit $f$ une fonction de $\mathbb{R}\longrightarrow\mathbb{R}$ continue par morceaux et périodique de période $T=\frac{1}{F}>0$. 
+Il existe alors $(a_n)_{n\in\mathbb{N}}$,$(b_n)_{n\in\mathbb{N}}$ deux suites de réels tel que pour tous $t\in\mathbb{R}$ où $f$ est continue, la série suivante :
+\begin{equation*}
+\sum_{k=0}^{\infty} a_k \cos(2\pi\cdot k F \cdot t) + \sum_{k=0}^{\infty}b_k\sin(2\pi\cdot k F \cdot t)
+\end{equation*}
+est convergente et converge vers $f(t)$. Dit autrement :
+\begin{equation*}
+\sum_{k=0}^{n} a_k \cos(2\pi\cdot kF \cdot t) + \sum_{k=0}^{n}b_k\sin(2\pi\cdot kF \cdot t) \xrightarrow{n\rightarrow\infty} f(t)
+\end{equation*}
+\end{thm}
+\begin{rmk}
+Il existe en plus des formules explicites pour calculer les $(a_k)_{k\in\mathbb{N}}$ et les $(b_k)_{k\in\mathbb{N}}$.
+\end{rmk}
+
+\begin{rmk}
+On dit que $f$ est continue par morceaux si il existe des intervalles $(I_n)$ de $\mathbb{R}$ tels que les $I_n$ recouvrent $\mathbb{R}$ , c'est à dire $\cup_n I_n = \mathbb{R}$ et $f$ est continue sur chaques $I_n$. 
+\newline On peut penser par exemple à la fonction qui vaut $1$ entre $[2n, 2n+1[$ et vaut 0 entre [2n+1, 2n+2[, c'est à dire la fonction qui vaut un si la partie entière de $t$ est paire et $0$ sinon. Cette fonction n'est pas continue au point entier, mais est continue par morceaux.
+\begin{center}
+\includegraphics[width=\textwidth]{fonctioncarre}
+\end{center}
+\newline\noindent Si $t$ est un point où $f$ n'est pas continue, la série converge toujours mais vers :
+\begin{equation*}
+\frac{\lim_{y\rightarrow t^{+}}f(y) + \lim_{y\rightarrow t^{-}}f(y)}{2}
+\end{equation*}
+Dans le cas où $f$ est continue en $t$, on a $f(t)=\lim_{y\rightarrow t^{+}}f(y) = \lim_{y\rightarrow t^{-}}f(y)$ et donc on retrouve
+\begin{equation*} 
+f(t) = \frac{f(t)+f(t)}{2}=\frac{\lim_{y\rightarrow t^{+}}f(y) + \lim_{y\rightarrow t^{-}}f(y)}{2}
+\end{equation*}
+Si on reformule le théorème en disant que $t\in\mathbb{R}$ un réel quelconque (où $f$ n'est pas forcément continue), la conclusion devient :
+\begin{equation*}
+\sum_{k=0}^{n} a_n \cos(2\pi\cdot F \cdot t) + \sum_{k=0}^{n}b_n\sin(2\pi\cdot F \cdot t) \xrightarrow{n\rightarrow\infty} \frac{\lim_{y\rightarrow t^{+}}f(y) + \lim_{y\rightarrow t^{-}}f(y)}{2}
+\end{equation*}
+On peut retenir que dans le cas où $t$ est un point de discontinuité de $f$, alors \textbf{la série converge vers la moyenne des deux valeurs de f en "chaques bords" de la discontinuité}. Pour l'exemple donné au dessus qui vaut $0$ et $1$, en un point de discontinuité, la série converge vers $\frac{1+0}{2} = \frac{1}{2}$.
+\end{rmk}
+
+\begin{rmk}
+\textbf{Ce théorème nous dit que toute fonction périodique et continue par morceaux se décompose en une somme de fonctions cosinus et sinus}. Dans notre cadre, nous nous intéressons en particulier au cas où la somme est finie pour simplifier et éviter les questions de convergence de séries qui sont hors programme. L'étude de ses fonctions fait donc sens puisque toutes les fonctions périodiques continuent par morceaux admettent une décomposition de la sorte.
+\end{rmk}
+
+\section{Le son}
+Le son, tous comme les vagues est une onde mécanique. Les ondes mécaniques sont caractérisées par le fait qu'elles proviennent de \textbf{la vibration d'un milieu}.\newline
+Dans le cadre du son, c'est l'air autour de nous qui constitue le milieu. Pour être précis, l'emission d'un son est la création d'une surpression qui se propage dans l'espace. Notons $\Delta P(p,t)$ la surpression crée au temps $t$ aux point $p=(x,y,z)$ de l'espace. Si on place un récepteur immobile au point $p_0$, il va percevoir une surpression $\Delta P(p_0,t)$ au temps $t$, la pression $P(t)$ que l'émetteur détecte est donc donnée par:
+\begin{equation*}
+P(t) = P_0 + \Delta P(p_0,t)
+\end{equation*}
+Où on note $P_0$ la pression atmosphérique.\newline
+C'est alors $f(t)=\Delta P(p_0,t)$ \textbf{que l'on considère de la forme $(1)$ et que l'on étudie}.\newline
+
+\noindent Quand on parle de son, on distingue plusieurs choses : 
+\begin{enumerate}
+\item[(i)] Le timbre du son : riche ou pauvre.
+\item[(ii)] La hauteur du son : aigu ou grave.
+\item[(iii)] L'intensité sonore: fort ou faible.
+\end{enumerate}
+
+\subsection{Timbre}
+Le timbre est lié aux nombres d'harmoniques dans l'onde.
+Prenons un exemple, soit $f$ définie par $f(t) = 2 + 3\cos(\pi \cdot t) + \cos(2\pi \cdot t) + \cos(4\pi\cdot t)$:
+\begin{equation*}
+f(t) = \underbrace{2}_\text{composante continue}+\underbrace{3\cos(2\pi\cdot\frac{1}{2}\cdot t)}_\text{fondamentale} + \underbrace{\cos(2\pi\cdot 2 \cdot \frac{1}{2} \cdot t)}_\text{$2^{eme}$ harmonique} + \underbrace{\cos(2\pi\cdot 4 \cdot \frac{1}{2} \cdot t)}_\text{$4^{eme}$ harmonique}
+\end{equation*}
+Plus un son a d'harmoniques, plus on le qualifie de riche. Lorsque $f$ est de la forme :
+\begin{equation*}
+f(t) =A_1\cos(2\pi\cdot F \cdot t)
+\end{equation*}
+on dit que \textbf{le son est pur}. En toutes lettres, l'onde n'est \textbf{constituée que de sa fondamentale}.
+
+\subsection{Hauteur}
+La hauteur du son est liée à la fréquence. Plus précisément, dans le cas d'un son pur, plus la fréquence est basse (donc la courbe "étalée") plus le son et grave, et réciproquement plus la fréquence est haute (donc la courbe fait "beaucoup" d'allers-retours en "peu" de temps) plus le son est aigu. Ceci est dû à la manière dont notre cerveau interprète les signaux électriques transmis par notre oreille, qui elle mesure la variation de pression. C'est donc le "tempo" auquelle "vibre l'air", qui différencie un son grave d'un son aigu.
+
+\subsection{Intensité sonore} La puissance $E$ (\textyit{Energie/Temps}) propagée par une onde émise d'un point matériel dans toutes les directions de manière uniforme, doit se répartir dans l'espace sur une surface de plus en plus grande au fur et à mesure que l'onde se propage. Par le principe de conservation de l'énergie, la puissance transportée par unité de surface doit donc diminuer si on s'éloigne de la source (car la surface couverte par l'onde augmente, mais l'énergie totale reste la même). \newline 
+\noindent Cette puissance est liée à la fréquence de l'onde \textbf{et} à son amplitude. Si la fréquence augmente, la puissance augmente; de même si l'amplitude augmente, la puissance augmente.\newline
+\noindent \textbf{L'intensité sonore} $I$ est alors définie comme \textbf{la puissance transportée} (par l'onde) \textbf{par unité de surface} . On a la formule suivante :
+\begin{equation*}
+I(r) = \frac{E}{4\pi r^2} \hspace{1em} (W.m^{-2})
+\end{equation*}
+Où $r$ est la distance entre l'éméteur et le récepteur.
+
+Pour des raisons pratiques, plutôt que de parler d'intensité sonore $I$, on parlera plus souvent \textbf{de niveau sonore $L$} qui se calcule en déciBels (dB) :
+\begin{equation*}
+L = 10\log(\frac{I}{I_0})
+\end{equation*}
+Où $I_0 = 10^{-12} \hspace{1em} W.m^{-2}$ est le seuil d'audibilité. Cette valeur a été fixée ainsi, car c'est l'intensité sonore minimale à partir de laquelle l'homme peut entendre un son. On peut noter que $dB$ est une unité artificielle (comme les pourcentages), c'est à dire que c'est une unité de comparaison. \newline
+On peut remarquer que :
+\begin{enumerate}
+\item[(i)] $L > 0$ si et seulement si $I>I_0$.
+\item[(ii)] $L = 0$ si et seulement si $I=I_0$.
+\item[(iii)] $L < 0$ si et seulement si $I<I_0$.
+\end{enumerate}
+Et autrement dit, un son est "entendable" si $L\geq 0$ .
+
+\begin{rmk}
+En réalité il y a moins de 1\% de la population qui entend les sons ayant une valeur proche de $0$db.
+\end{rmk}
+
+\subsection{Addition d'ondes sonores}
+Si deux surpressions sont crées, la surpression résultante est la somme des deux (à quelques approximations près). \textbf{Donc les ondes sonores s'aditionnent !} (c'est une propriétée générale des ondes.) 
+Dans le cas où deux sons purs d'équations : $A\cos(2\pi\cdot F_1 \cdot t)$ et $B\cos(2\pi\cdot F_2 \cdot t)$ sont reçus simultanément par un récepteur. La surpression reçu $f(t)$ a pour équation :
+\begin{equation*}
+f(t)= A\cos(2\pi\cdot F_1 \cdot t)+B\cos(2\pi\cdot F_2 \cdot t)
+\end{equation*}
+Et en particulier si $F_1 = F_2$
+\begin{equation*}
+f(t)= (A+B)\cos(2\pi\cdot F_1 \cdot t)
+\end{equation*}
+Et de plus si $A=-B$
+\begin{equation*}
+f(t)= 0
+\end{equation*}
+Il n'y a plus de surpression ! On peut "faire disparaitre un son" avec un autre son !
+\end{document}
