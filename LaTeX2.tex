@@ -12,9 +12,23 @@
 \usepackage[latin1]{inputenc}
 \usepackage[cyr]{aeguill}
 \usepackage[francais]{babel}
+\usepackage{lmodern}
+\let\oldquote\quote
+\let\endoldquote\endquote
+\renewenvironment{quote}[2][]
+  {\if\relax\detokenize{#1}\relax
+     \def\quoteauthor{#2}%
+   \else
+     \def\quoteauthor{#2~---~#1}%
+   \fi
+   \oldquote}
+  {\par\nobreak\smallskip\hfill(\quoteauthor)%
+   \endoldquote\addvspace{\bigskipamount}}
+
 %Here I define some theorem styles and shortcut commands for symbols I use often
 \theoremstyle{definition}
 \newtheorem{defn}{Définition}
+\newtheorem{princ}{Principe}
 \newtheorem{thm}{Théorème}
 \newtheorem{cor}{Corollary}
 \newtheorem*{rmk}{Remarque}
@@ -24,6 +38,7 @@
 \newtheorem*{soln}{Solution}
 \newtheorem{prop}{Proposition}
 \newtheorem{exo}{Exercice}
+\newtheorem*{ph}{Parenthèse Historique}
 
 \newcommand{\lra}{\longrightarrow}
 \newcommand{\ra}{\rightarrow}
@@ -132,8 +147,12 @@ La fondamentale est l'harmonique de rang 1.
 \end{rmk}
 
 \begin{defn}
-Pour $f$ une fonction définie sur $\mathbb{R}$ périodique de période $T>0$. \newline On définit sa fréquence comme $\frac{1}{F}$.
+Pour $f$ une fonction définie sur $\mathbb{R}$ périodique de période $T>0$. \newline On définit sa fréquence comme $\frac{1}{T}$.
 \end{defn}
+\begin{rmk}
+En physique le mot fréquence est utiliser spécifiquement si $t$ représente le temps.
+\end{rmk}
+
 En utilisant les propriétés de la fonction cosinus (qui est périodique de période $2\pi$), on déduit le résultat suivant :
 \begin{prop}
 Pour $f$ définie par $(1)$ on a que:
@@ -210,7 +229,7 @@ On dit que $f$ est continue par morceaux si il existe des intervalles $(I_n)$ de
 \begin{center}
 \includegraphics[width=\textwidth]{fonctioncarre}
 \end{center}
-\newline\noindent Si $t$ est un point où $f$ n'est pas continue, la série converge toujours mais vers :
+\noindent Si $t$ est un point où $f$ n'est pas continue, la série converge toujours mais vers :
 \begin{equation*}
 \frac{\lim_{y\rightarrow t^{+}}f(y) + \lim_{y\rightarrow t^{-}}f(y)}{2}
 \end{equation*}
@@ -228,15 +247,16 @@ On peut retenir que dans le cas où $t$ est un point de discontinuité de $f$, alo
 \begin{rmk}
 \textbf{Ce théorème nous dit que toute fonction périodique et continue par morceaux se décompose en une somme de fonctions cosinus et sinus}. Dans notre cadre, nous nous intéressons en particulier au cas où la somme est finie pour simplifier et éviter les questions de convergence de séries qui sont hors programme. L'étude de ses fonctions fait donc sens puisque toutes les fonctions périodiques continuent par morceaux admettent une décomposition de la sorte.
 \end{rmk}
-
+\newpage
 \section{Le son}
-Le son, tous comme les vagues est une onde mécanique. Les ondes mécaniques sont caractérisées par le fait qu'elles proviennent de \textbf{la vibration d'un milieu}.\newline
-Dans le cadre du son, c'est l'air autour de nous qui constitue le milieu. Pour être précis, l'emission d'un son est la création d'une surpression qui se propage dans l'espace. Notons $\Delta P(p,t)$ la surpression crée au temps $t$ aux point $p=(x,y,z)$ de l'espace. Si on place un récepteur immobile au point $p_0$, il va percevoir une surpression $\Delta P(p_0,t)$ au temps $t$, la pression $P(t)$ que l'émetteur détecte est donc donnée par:
+Le son, tous comme les vagues est une onde mécanique. Les ondes mécaniques sont caractérisées par le fait qu'elles proviennent de \textbf{la propagation d'une perturbation dans un milieu matériel}.\newline
+
+Dans le cadre du son, c'est l'air autour de nous qui constitue le milieu. Pour être précis, l'emission d'un son est la création d'une surpression qui se propage dans l'espace. Notons $\Delta P(\vec{p},t)$ la surpression crée au temps $t$ aux point $\vec{p}$ de l'espace. Si on place un récepteur immobile au point $\vec{p_0}$, il va percevoir une surpression $\Delta P(\vec{p_0},t)$ au temps $t$, la pression $P(t)$ que l'émetteur détecte est donc donnée par:
 \begin{equation*}
-P(t) = P_0 + \Delta P(p_0,t)
+P(t) = P_0 + \Delta P(\vec{p_0},t)
 \end{equation*}
 Où on note $P_0$ la pression atmosphérique.\newline
-C'est alors $f(t)=\Delta P(p_0,t)$ \textbf{que l'on considère de la forme $(1)$ et que l'on étudie}.\newline
+C'est alors $f(t)=\Delta P(\vec{p_0},t)$ \textbf{que l'on considère de la forme $(1)$ et que l'on étudie}.\newline
 
 \noindent Quand on parle de son, on distingue plusieurs choses : 
 \begin{enumerate}
@@ -260,7 +280,7 @@ on dit que \textbf{le son est pur}. En toutes lettres, l'onde n'est \textbf{cons
 \subsection{Hauteur}
 La hauteur du son est liée à la fréquence. Plus précisément, dans le cas d'un son pur, plus la fréquence est basse (donc la courbe "étalée") plus le son et grave, et réciproquement plus la fréquence est haute (donc la courbe fait "beaucoup" d'allers-retours en "peu" de temps) plus le son est aigu. Ceci est dû à la manière dont notre cerveau interprète les signaux électriques transmis par notre oreille, qui elle mesure la variation de pression. C'est donc le "tempo" auquelle "vibre l'air", qui différencie un son grave d'un son aigu.
 
-\subsection{Intensité sonore} La puissance $E$ (\textyit{Energie/Temps}) propagée par une onde émise d'un point matériel dans toutes les directions de manière uniforme, doit se répartir dans l'espace sur une surface de plus en plus grande au fur et à mesure que l'onde se propage. Par le principe de conservation de l'énergie, la puissance transportée par unité de surface doit donc diminuer si on s'éloigne de la source (car la surface couverte par l'onde augmente, mais l'énergie totale reste la même). \newline 
+\subsection{Intensité sonore} La puissance $E$ (\textit{Energie/Temps}) propagée par une onde émise d'un point matériel dans toutes les directions de manière uniforme, doit se répartir dans l'espace sur une surface de plus en plus grande au fur et à mesure que l'onde se propage. Par le principe de conservation de l'énergie, la puissance transportée par unité de surface doit donc diminuer si on s'éloigne de la source (car la surface couverte par l'onde augmente, mais l'énergie totale reste la même). \newline 
 \noindent Cette puissance est liée à la fréquence de l'onde \textbf{et} à son amplitude. Si la fréquence augmente, la puissance augmente; de même si l'amplitude augmente, la puissance augmente.\newline
 \noindent \textbf{L'intensité sonore} $I$ est alors définie comme \textbf{la puissance transportée} (par l'onde) \textbf{par unité de surface} . On a la formule suivante :
 \begin{equation*}
@@ -300,4 +320,69 @@ Et de plus si $A=-B$
 f(t)= 0
 \end{equation*}
 Il n'y a plus de surpression ! On peut "faire disparaitre un son" avec un autre son !
+
+\newpage
+\section{Les Ondes Electromagnétiques}
+
+Les ondes électromagnétiques contrairement aux ondes mécaniques n'ont pas besoin de milieu materiel pour se propapager.
+
+
+\begin{ph}
+Au 17\ieme{} siècle , Christiaan Huygens (1629 - 1695) mathématicien, physicien et astronome Néerlandais publie <<Traité de la lumière>>, en étudiant les phénomènes de reflexions et de réfraction, il montre que la lumière à une nature ondulatoire. Or pour les savants de l'époque les seules ondes connue sont les ondes mécaniques. Il est assez naturel que s'impose chez eux l'idée que la lumière, comme les ondes mécaniques soit la propagation d'une perturbation d'un milieu. De cette idée naiteras de nombreuses hypothèses sur les propriétés de ce milieu, que l'on appelera <<ether luminifère>>. Ce n'est quand 1905 qu'Albert Einstein ballaie d'un revers de main cette idée d'ether luminifère en publiant <<De la dynamique des corps en mouvement>> où on peut y lire dans son introduction : 
+
+\begin{quote}[De l'électrodynamique des corps en mouvement]{Albert Einstein}
+\textit{Des exemples similaires, tout comme l'essai infructueux de confirmer le mouvement de la Terre relativement au <<médium de la lumière>> , nous amène à la supposition que non seulement en mécanique, mais aussi en électrodynamique, aucune propriété des faits observés ne correspond au concept de repos absolu [...] Dans le texte qui suit, nous élevons cette conjecture au rang de postulat (que nous appellerons dorénavant <<principe de relativité>>) et introduisons un autre postulat — qui au premier regard est incompatible avec le premier — que la lumière se propage dans l'espace vide, à une vitesse V indépendante de l'état de mouvement du corps émetteur. [...] Il sera démontré que l'introduction d'un <<éther luminifère>> est superflu, puisque selon les conceptions que nous développerons, nous n'introduirons ni un <<espace absolument au repos>> muni de propriétés spéciales et ni n'associerons un vecteur vitesse à un point où des phénomènes électromagnétiques se déroulent.}
+\end{quote}
+
+La même années Einstein publie un autre articles, dans le quelle il démontre que la lumière se comporte comme si elle étais composé de corpuscule. Ce qui semble contredire l'hypothèse admise que la lumière etait une onde. Contredire ? Non Einstein montre qu'il n'y as pas de contradiction.
+\end{ph}
+
+Dans le cadre du son, nous avons regarder le problème en un point fixé de l'espace en faisant varier le paramètre temps. Nous pouvons aussi renverser le point de vue et fixer le temps (comme si l'on prennait une photo) et regarder la forme que l'onde électromagnétique aurrais dans l'espace à un temps fixé. Il se trouve que son mouvement dans l'espace est aussi périodique (sur des distance raisonablement courtes). La période $\lambda$ $(m^{-1})$ par rapport aux paramètre d'espace est appelé \textbf{longeur d'onde}.
+\begin{center}
+\includegraphics[width=15em]{onde_electromagnetique}
+\end{center}
+On a la formule suivante : 
+\begin{equation*}
+\lambda = \frac{v}{f}
+\end{equation*}
+Où $f$ est la fréquence de l'onde, et $v$ est la vitesse de propagation en valeur absolue de l'onde.
+\begin{center}
+\includegraphics[width=\textwidth]{Figure_2}
+\end{center}
+Dans le vide les ondes electromagnétique se déplace à vitesse constante $c \approx 3.10^8 m.s^{-1}$. Mais la vitesse de propagation des ondes électromagnétique dans un milieu (par exemples eau, air, plexigas, etc ...) est inférieur.
+
+Les équations qui decrivent le comportement du rayonnement électromagnétique sont appelés les équations de Maxwell (elles sont hors programme). Le type d'onde la plus simple satisfaisant les equation de maxwell dans le vide sont de la forme :
+\begin{equation*}
+E(\vec{p},t) = A\cos\big(2\pi\big( \frac{\vec{p}\cdot \vec{u}}{\lambda} - f\cos t\big)\big)
+\end{equation*}
+
+Où $E(\vec{p},t)$ est la norme du champs electrique au point $\vec{p}$ de l'espace au temps $t$, et $\vec{u}$ est un vecteur unitaire qui pointe dans la direction de propagation de l'onde ($\vec{u} = \frac{\vec{c}}{||c||}$). 
+Si l'on prend le bon repère et que l'on note $\vec{p}=(x,y,z)$ on a l'équation :
+\begin{equation*}
+E(\vec{p},t) = A\cos\big(2\pi\big( \frac{x}{\lambda} - f\cos t\big)\big)
+\end{equation*}
+\begin{rmk}
+Cette fonction est du type $(1)$ par rapport à $x$ et $t$ !
+\end{rmk}
+
+\subsection{Modulation}
+La modulation est une méthode permetant de transmetre une information encodée dans une onde (un son, une vidéo, etc...) en évitant certaine restriction technique telles que le parasitage par les installations électriques. Pour effectuer une modulation on a besoin de \textbf{deux} ondes, une onde porteuse que l'on a besoin pour <<encoder>> et <<decoder>> l'onde, et une onde qui représente le signal à transmétre.
+On utilise deux type de modulation différentes la modulation d'amplitude (AM) et la modulation de fréquence (FM):
+\begin{enumerate}
+\item[\textbf{[AM]}] La modulation d'amplitude consiste en une modification de l'amplitude de la porteuse. Dans le cas simplifé ou la porteuse $F_p$ et l'information $F_i$ sont sinusoidale : 
+\begin{equation*}
+F_p (t) = A_p \cos(2\pi f_p \cdot t)
+\end{equation*}
+\begin{equation*}
+F_i (t) = A_i \cos(2\pi f_i \cdot t)
+\end{equation*}
+Le signal modulé $F_m$ seras alors de la forme :
+\begin{equation*}
+F_m (t) = A_p(1+k\cdot F_i(t))\cos(2\pi f_p \cdot t)
+\end{equation*}
+Où $k$ est une valeur fixé, choisi de sorte que le signal modulé ait une variation d'amplitude mesurable dans les conditions de l'expérience.
+\item[\textbf{[FM]}] La modulation de fréquence consiste en une modification de la fréquence de la porteuse. Il est plus dure d'obtenir des formules dans le cas de la modulation de fréquence. La modulation de fréquence est plus robuste que la modulation d'amplitude pour transmettre un message dans des conditions difficiles.
+\end{enumerate}
+
+
 \end{document}

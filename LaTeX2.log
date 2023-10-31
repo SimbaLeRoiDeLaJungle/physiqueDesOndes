@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.2.11)  29 OCT 2023 10:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.2.11)  1 NOV 2023 00:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -403,18 +403,59 @@ Package babel Info: Making ? an active character on input line 398.
 \FBfnindent=\dimen165
 )))
 (C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/latex/carlisle\scalefnt.sty)
+(C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
 \c@defn=\count280
-\c@thm=\count281
-\c@cor=\count282
-\c@lem=\count283
-\c@ex=\count284
-\c@prop=\count285
-\c@exo=\count286
+\c@princ=\count281
+\c@thm=\count282
+\c@cor=\count283
+\c@lem=\count284
+\c@ex=\count285
+\c@prop=\count286
+\c@exo=\count287
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 91
+.
 
+(C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
 (C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count287
+\l__color_backend_stack_int=\count288
 \l__pdf_internal_box=\box55
 ) (LaTeX2.aux
 (C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/fr\babel
@@ -424,42 +465,42 @@ Package babel Info: Importing font and identification data for french
 ))
 \openout1 = `LaTeX2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OT2/cmr/m/n on input line 76.
-LaTeX Font Info:    Trying to load font information for OT2+cmr on input line 7
-6.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OT2/cmr/m/n on input line 91.
+LaTeX Font Info:    Trying to load font information for OT2+cmr on input line 9
+1.
 
 (C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/latex/cyrillic\ot2cmr.fd
 File: ot2cmr.fd 2001/08/11 v3.2c Computer Modern Cyrillic font definitions
 )
-LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    ... okay on input line 91.
 
 (C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count288
+\scratchcounter=\count289
 \scratchdimen=\dimen166
 \scratchbox=\box56
-\nofMPsegments=\count289
-\nofMParguments=\count290
+\nofMPsegments=\count290
+\nofMParguments=\count291
 \everyMPshowfont=\toks32
-\MPscratchCnt=\count291
+\MPscratchCnt=\count292
 \MPscratchDim=\dimen167
-\MPnumerator=\count292
-\makeMPintoPDFobject=\count293
+\MPnumerator=\count293
+\makeMPintoPDFobject=\count294
 \everyMPtoPDFconversion=\toks33
 )
 (C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -472,43 +513,55 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Info: Redefining \degres on input line 76.
-LaTeX Info: Redefining \up on input line 76.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 89.
+LaTeX Info: Redefining \degres on input line 91.
+LaTeX Info: Redefining \up on input line 91.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+04.
+ (C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+04.
 
- (C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+(C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+104.
+
+(C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+104.
+
+(C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 104.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 104.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 104.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 104
+.
+
+(C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 89.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 104
+.
 
 (C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 89
-.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 10
+4.
 
 (C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-
-! Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.93 \end{align*}
-                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 94--96
-
- []
-
 
 ! Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
@@ -522,78 +575,120 @@ l.108 \end{align*}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--111
+
+ []
+
+
+! Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.123 \end{align*}
+                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 [1
 
 {C:/Users/mathi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 163--166
+Underfull \hbox (badness 10000) in paragraph at lines 182--185
 
  []
 
 [2]
-<fonctioncarre.png, id=20, 581.92406pt x 125.71968pt>
+<fonctioncarre.png, id=22, 581.92406pt x 125.71968pt>
 File: fonctioncarre.png Graphic file (type png)
 <use fonctioncarre.png>
-Package pdftex.def Info: fonctioncarre.png  used on input line 211.
+Package pdftex.def Info: fonctioncarre.png  used on input line 230.
 (pdftex.def)             Requested size: 469.75499pt x 101.48898pt.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.213 \newline
-              \noindent Si $t$ est un point où $f$ n'est pas continue, la sé...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 237--240
+ [3 <./fonctioncarre.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 252--253
 
  []
 
-[3 <./fonctioncarre.png>]
-! Undefined control sequence.
-l.263 ...ensité sonore} La puissance $E$ (\textyit
-                                                  {Energie/Temps}) propagée ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-[4] [5] (LaTeX2.aux) ) 
+Underfull \hbox (badness 10000) in paragraph at lines 257--260
+
+ []
+
+[4] [5]
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.334 ...nomènes électromagnétiques se déroulent.}
+                                                  
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.334 ...nomènes électromagnétiques se déroulent.}
+                                                  
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+<onde_electromagnetique.jpg, id=39, 531.9875pt x 497.86pt>
+File: onde_electromagnetique.jpg Graphic file (type jpg)
+<use onde_electromagnetique.jpg>
+Package pdftex.def Info: onde_electromagnetique.jpg  used on input line 342.
+(pdftex.def)             Requested size: 150.0pt x 140.37222pt.
+<Figure_2.png, id=40, 1290.7422pt x 867.24pt>
+File: Figure_2.png Graphic file (type png)
+<use Figure_2.png>
+Package pdftex.def Info: Figure_2.png  used on input line 350.
+(pdftex.def)             Requested size: 469.75499pt x 315.62029pt.
+[6 <./onde_electromagnetique.jpg>] [7 <./Figure_2.png>] [8] (LaTeX2.aux) ) 
 Here is how much of TeX's memory you used:
- 5638 strings out of 475385
- 90326 string characters out of 2776907
- 441237 words of memory out of 3000000
- 26910 multiletter control sequences out of 15000+600000
- 493425 words of font info for 72 fonts, out of 8000000 for 9000
+ 5804 strings out of 475385
+ 94537 string characters out of 2776907
+ 440555 words of memory out of 3000000
+ 27066 multiletter control sequences out of 15000+600000
+ 515470 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,11n,76p,571b,426s stack positions out of 10000i,1000n,20000p,200000b,80000s
-<C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmb10.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/mathi/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mathi/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/mathi/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/mathi
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Use
-rs/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb
-><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mr5.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmr7.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmsy10.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmsy5.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/mathi/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/mathi/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/mathi/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on LaTeX2.pdf (5 pages, 196777 bytes).
+ 70i,11n,76p,1022b,426s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{C:/U
+sers/mathi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/U
+sers/mathi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users
+/mathi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users
+/mathi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/mat
+hi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Users/mat
+hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/mat
+hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/mat
+hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/mat
+hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/mat
+hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/math
+i/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/mathi
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/mathi/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/mathi/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/mathi/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/mathi/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/mathi/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/mathi/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/mathi/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy5.pfb><C:/Users/mathi/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/mathi/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/m
+athi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pf
+b>
+Output written on LaTeX2.pdf (8 pages, 509084 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
+ 131 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
