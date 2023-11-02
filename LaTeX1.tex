@@ -90,7 +90,7 @@
 
 \begin{document}
 
-\section{Dérivée des fonctions usuelles}
+\section{Dérivées des fonctions usuelles}
 
 \begin{equation*}
 (x^n)' = n \cdot x^{n-1}
@@ -139,7 +139,7 @@ Soit $f$, $g$ : $ \mathbb{R} \rightarrow \mathbb{R}$ deux fonctions et $a\in \ma
 
 \section{Exercices}
 
-Calculer les dérivées des fonctions suivantes: 
+Calculez les dérivées des fonctions suivantes: 
 \begin{equation*}
 f(x) = 3\cdot x^4 + 1
 \end{equation*}
@@ -158,32 +158,33 @@ f(x) = \frac{x^2 + 3}{1+x^4}
 
 \section{Les elements différentielle en physique}
 
-Montrons les formulles avec des outils intuitif. Commençons par le (ii). Si $x$ varie de $dx$ alors on note $df$ la variation de $f$ entre $x$ et $x+dx$. De même pour $g$ et $f+g$. On as alors : 
+Montrons les formulles avec des outils intuitif. Commençons par le (ii). Si $x$ varie de $\Delta x$ alors on note $\Delta f$ la variation de $f$ entre $x$ et $x+dx$. De même pour $g$ et $f+g$. On as alors : 
 \begin{equation*}
 \begin{align*}
-d(f + g) & = f(x+dx) + g(x+dx) -  (f(x) + g(x)) \\
-& = \big(f(x+dx) - f(x)\big) + \big(g(x+dx) - g(x)\big)\\
-& = df + dg 
+\Delta(f + g) & = f(x+\Delta x) + g(x+\Delta x) -  (f(x) + g(x)) \\
+& = \big(f(x+\Delta x) - f(x)\big) + \big(g(x+\Delta x) - g(x)\big)\\
+& = \Delta f + \Delta g 
 \end{align*}
 \end{equation*}
 en divisant par $dx$ des deux coté :
 \begin{equation*}
-\frac{d(f + g)}{dx} = \frac{df}{dx} + \frac{dg}{dx} 
+\frac{\Delta(f + g)}{\Delta x} = \frac{\Delta f}{\Delta x} + \frac{\Delta g}{\Delta x} 
 \end{equation*}
-en prennant la limite quand $dx$ tend vers $0$ on obtient : 
+
+en prennant la limite quand $\Delta x$ tend vers $0$ on obtient : 
 \begin{equation*}(f + g)' (x) = f'(x) + g'(x)\end{equation*}
 
 Pour le (i)
 \begin{equation*}
 \begin{align*}
-d(f g) & = f(x+dx)g(x+dx) - f(x)g(x) \\
-& = (f(x) + df)(g(x) + dg) - f(x)g(x) \\
-& = f(x)g(x)+g(x)df+f(x)dg + dgdf - f(x)g(x) \\
-& = g(x)df + f(x) dg + dgdf \\
-\frac{d(fg)}{dx} = g(x)\frac{df}{dx} + f(x)\frac{dg}{dx} + \frac{df dg}{dx}
+\Delta (f g) & = f(x+\Delta x)g(x+ \Delta x) - f(x)g(x) \\
+& = (f(x) + \Delta f)(g(x) + \Delta g) - f(x)g(x) \\
+& = f(x)g(x)+g(x)\Delta f+f(x)\Delta g + \Delta g \Delta f - f(x)g(x) \\
+& = g(x)\Delta f + f(x) \Delta g + \Delta g \Delta f \\
+\frac{\Delta(fg)}{\Delta x} &= g(x)\frac{\Delta f}{\Delta x} + f(x)\frac{\Delta g}{\Delta x} + \frac{\Delta f \Delta g}{\Delta x}
 \end{align*}
 \end{equation*}
-Ici il faut comprendre que dans la dérivé seule les terme <<d'ordre 1>> compte, c'est à dire ceux qui n'ont qu'un $d$. Le terme $\frac{df dg}{dx}$ tend vers 0. On trouve donc finalement : 
+Ici il faut comprendre que dans la dérivé seule les terme <<d'ordre 1>> compte, c'est à dire ceux qui n'ont qu'un $d$. Autrement on peut vérifier que Le terme $\frac{\Delta f \Delta g}{\Delta x}$ tend vers 0. On trouve donc finalement : 
 \begin{equation*}
 (fg)'(x) = g(x)f'(x) + f(x)g'(x)
 \end{equation*}
