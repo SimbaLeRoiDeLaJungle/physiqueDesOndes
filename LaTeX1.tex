@@ -1,0 +1,192 @@
+\documentclass[]{article}
+
+%These tell TeX which packages to use.
+\usepackage{array,epsfig}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsxtra}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{color}
+\usepackage[latin1]{inputenc}
+\usepackage[cyr]{aeguill}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+\let\oldquote\quote
+\let\endoldquote\endquote
+\renewenvironment{quote}[2][]
+  {\if\relax\detokenize{#1}\relax
+     \def\quoteauthor{#2}%
+   \else
+     \def\quoteauthor{#2~---~#1}%
+   \fi
+   \oldquote}
+  {\par\nobreak\smallskip\hfill(\quoteauthor)%
+   \endoldquote\addvspace{\bigskipamount}}
+
+%Here I define some theorem styles and shortcut commands for symbols I use often
+\theoremstyle{definition}
+\newtheorem{defn}{Définition}
+\newtheorem{princ}{Principe}
+\newtheorem{thm}{Théorème}
+\newtheorem{cor}{Corollary}
+\newtheorem*{rmk}{Remarque}
+\newtheorem{lem}{Lemma}
+\newtheorem*{joke}{Joke}
+\newtheorem{ex}{Exemple}
+\newtheorem*{soln}{Solution}
+\newtheorem{prop}{Proposition}
+\newtheorem{exo}{Exercice}
+\newtheorem*{ph}{Parenthèse Historique}
+
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\surj}{\twoheadrightarrow}
+\newcommand{\graph}{\mathrm{graph}}
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\Z}{\bb{Z}}
+\newcommand{\Q}{\bb{Q}}
+\newcommand{\R}{\bb{R}}
+\newcommand{\C}{\bb{C}}
+\newcommand{\N}{\bb{N}}
+\newcommand{\M}{\mathbf{M}}
+\newcommand{\m}{\mathbf{m}}
+\newcommand{\MM}{\mathscr{M}}
+\newcommand{\HH}{\mathscr{H}}
+\newcommand{\Om}{\Omega}
+\newcommand{\Ho}{\in\HH(\Om)}
+\newcommand{\bd}{\partial}
+\newcommand{\del}{\partial}
+\newcommand{\bardel}{\overline\partial}
+\newcommand{\textdf}[1]{\textbf{\textsf{#1}}\index{#1}}
+\newcommand{\img}{\mathrm{img}}
+\newcommand{\ip}[2]{\left\langle{#1},{#2}\right\rangle}
+\newcommand{\inter}[1]{\mathrm{int}{#1}}
+\newcommand{\exter}[1]{\mathrm{ext}{#1}}
+\newcommand{\cl}[1]{\mathrm{cl}{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\vol}{\mathrm{vol}}
+\newcommand{\cnt}{\mathrm{ct}}
+\newcommand{\osc}{\mathrm{osc}}
+\newcommand{\LL}{\mathbf{L}}
+\newcommand{\UU}{\mathbf{U}}
+\newcommand{\support}{\mathrm{support}}
+\newcommand{\AND}{\;\wedge\;}
+\newcommand{\OR}{\;\vee\;}
+\newcommand{\Oset}{\varnothing}
+\newcommand{\st}{\ni}
+\newcommand{\wh}{\widehat}
+
+%Pagination stuff.
+\setlength{\topmargin}{-.3 in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textheight}{9.in}
+\setlength{\textwidth}{6.5in}
+\pagestyle{empty}
+
+
+
+\begin{document}
+
+\section{Dérivée des fonctions usuelles}
+
+\begin{equation*}
+(x^n)' = n \cdot x^{n-1}
+\end{equation*}
+
+\begin{equation*}
+\cos'(x) = -\sin(x)
+\end{equation*}
+
+\begin{equation*}
+\sin'(x) = \cos(x)
+\end{equation*}
+
+\begin{equation*}
+(e^x) ' = e^x 
+\end{equation*}
+
+\begin{equation*}
+\ln'(x) = \frac{1}{x}
+\end{equation*}
+
+\section{Opération autour de la dérivation}
+
+\begin{thm}
+Soit $f$, $g$ : $ \mathbb{R} \rightarrow \mathbb{R}$ deux fonctions et $a\in \mathbb{R}$. On as les formules suivantes :
+\begin{enumerate}
+\item[(i)] \textbf{Formule de Leibnitz}
+\begin{equation*}
+(f\cdot g) ' (x) = f'(x) \cdot g(x) + g'(x) \cdot f(x)
+\end{equation*}
+\item[(ii)] \textbf{Linéarité}
+\begin{equation*}
+(f + g)' (x) = f'(x) + g'(x) \hspace{0.7em}\text{\&} \hspace{0.7em} (a\cdot f)'(x) =  a\cdot f'(x)
+\end{equation*}
+\item[(iii)] \textbf{Formule de composition}
+\begin{equation*}
+(f\circ g)'(x) = g'(x) \cdot f'(g(x))
+\end{equation*}
+
+\item[(iii)] \textbf{Dérivée de l'inverse}, on suppose $f$ est non nul.
+\begin{equation*}
+(\frac{1}{f})'(x) = -\frac{f'(x)}{f(x)^2}
+\end{equation*}
+\end{enumerate}
+\end{thm}
+
+\section{Exercices}
+
+Calculer les dérivées des fonctions suivantes: 
+\begin{equation*}
+f(x) = 3\cdot x^4 + 1
+\end{equation*}
+
+\begin{equation*}
+f(x) = x \cdot e^{\cos(x)}
+\end{equation*}
+
+\begin{equation*}
+f(x) = \ln(1+x^2)
+\end{equation*}
+
+\begin{equation*}
+f(x) = \frac{x^2 + 3}{1+x^4}
+\end{equation*}
+
+\section{Les elements différentielle en physique}
+
+Montrons les formulles avec des outils intuitif. Commençons par le (ii). Si $x$ varie de $dx$ alors on note $df$ la variation de $f$ entre $x$ et $x+dx$. De même pour $g$ et $f+g$. On as alors : 
+\begin{equation*}
+\begin{align*}
+d(f + g) & = f(x+dx) + g(x+dx) -  (f(x) + g(x)) \\
+& = \big(f(x+dx) - f(x)\big) + \big(g(x+dx) - g(x)\big)\\
+& = df + dg 
+\end{align*}
+\end{equation*}
+en divisant par $dx$ des deux coté :
+\begin{equation*}
+\frac{d(f + g)}{dx} = \frac{df}{dx} + \frac{dg}{dx} 
+\end{equation*}
+en prennant la limite quand $dx$ tend vers $0$ on obtient : 
+\begin{equation*}(f + g)' (x) = f'(x) + g'(x)\end{equation*}
+
+Pour le (i)
+\begin{equation*}
+\begin{align*}
+d(f g) & = f(x+dx)g(x+dx) - f(x)g(x) \\
+& = (f(x) + df)(g(x) + dg) - f(x)g(x) \\
+& = f(x)g(x)+g(x)df+f(x)dg + dgdf - f(x)g(x) \\
+& = g(x)df + f(x) dg + dgdf \\
+\frac{d(fg)}{dx} = g(x)\frac{df}{dx} + f(x)\frac{dg}{dx} + \frac{df dg}{dx}
+\end{align*}
+\end{equation*}
+Ici il faut comprendre que dans la dérivé seule les terme <<d'ordre 1>> compte, c'est à dire ceux qui n'ont qu'un $d$. Le terme $\frac{df dg}{dx}$ tend vers 0. On trouve donc finalement : 
+\begin{equation*}
+(fg)'(x) = g(x)f'(x) + f(x)g'(x)
+\end{equation*}
+
+
+\end{document}

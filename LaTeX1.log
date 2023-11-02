@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.2.11)  2 NOV 2023 06:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.2.11)  2 NOV 2023 13:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./LaTeX2.tex
-(LaTeX2.tex
+**./LaTeX1.tex
+(LaTeX1.tex
 LaTeX2e <2022-06-01> patch level 5
 L3 programming layer <2022-09-28>
 (C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -457,13 +457,13 @@ tex.def
 File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count288
 \l__pdf_internal_box=\box55
-) (LaTeX2.aux
+) (LaTeX1.aux
 (C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/fr\babel
 -french.tex
 Package babel Info: Importing font and identification data for french
 (babel)             from babel-fr.ini. Reported on input line 11.
 ))
-\openout1 = `LaTeX2.aux'.
+\openout1 = `LaTeX1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
 LaTeX Font Info:    ... okay on input line 91.
@@ -515,49 +515,49 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 LaTeX Info: Redefining \degres on input line 91.
 LaTeX Info: Redefining \up on input line 91.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-04.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 9
+5.
  (C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-04.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9
+5.
 
 (C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-104.
+95.
 
 (C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-104.
+95.
 
 (C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 104.
+(Font)              <10> on input line 95.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 104.
+(Font)              <7> on input line 95.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 104.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 104
-.
+(Font)              <5> on input line 95.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 95.
+
 
 (C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 104
-.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 95.
+
 
 (C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 10
-4.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 95
+.
 
 (C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
@@ -570,16 +570,14 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.108 \end{align*}
+l.167 \end{align*}
                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+[1
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--111
-
- []
-
+{C:/Users/mathi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 
 ! Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
@@ -588,107 +586,39 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.123 \end{align*}
+l.184 \end{align*}
                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[1
-
-{C:/Users/mathi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 182--185
-
- []
-
-[2]
-<fonctioncarre.png, id=21, 581.92406pt x 125.71968pt>
-File: fonctioncarre.png Graphic file (type png)
-<use fonctioncarre.png>
-Package pdftex.def Info: fonctioncarre.png  used on input line 230.
-(pdftex.def)             Requested size: 469.75499pt x 101.48898pt.
- [3 <./fonctioncarre.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 252--253
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 257--260
-
- []
-
-[4] [5]
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin1'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.334 ...nomènes électromagnétiques se déroulent.}
-                                                  
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin1'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.334 ...nomènes électromagnétiques se déroulent.}
-                                                  
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-<onde_electromagnetique.jpg, id=38, 531.9875pt x 497.86pt>
-File: onde_electromagnetique.jpg Graphic file (type jpg)
-<use onde_electromagnetique.jpg>
-Package pdftex.def Info: onde_electromagnetique.jpg  used on input line 342.
-(pdftex.def)             Requested size: 150.0pt x 140.37222pt.
-<Figure_2.png, id=39, 1290.7422pt x 867.24pt>
-File: Figure_2.png Graphic file (type png)
-<use Figure_2.png>
-Package pdftex.def Info: Figure_2.png  used on input line 350.
-(pdftex.def)             Requested size: 469.75499pt x 315.62029pt.
-[6 <./onde_electromagnetique.jpg>] [7 <./Figure_2.png>] [8] (LaTeX2.aux) ) 
+[2] (LaTeX1.aux) ) 
 Here is how much of TeX's memory you used:
- 5804 strings out of 475385
- 94537 string characters out of 2776907
- 440555 words of memory out of 3000000
- 27066 multiletter control sequences out of 15000+600000
- 515470 words of font info for 59 fonts, out of 8000000 for 9000
+ 5751 strings out of 475385
+ 93523 string characters out of 2776907
+ 435555 words of memory out of 3000000
+ 27018 multiletter control sequences out of 15000+600000
+ 502222 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,11n,76p,1022b,426s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/U
-sers/mathi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users
-/mathi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users
-/mathi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users
-/mathi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/mat
-hi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Users/mat
-hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/mat
-hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/mat
-hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/mat
-hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/mat
-hi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/math
-i/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/mathi
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/mathi/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/mathi/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/mathi/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/mathi/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/mathi/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/mathi/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/mathi/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy5.pfb><C:/Users/mathi/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/mathi/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/m
-athi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pf
-b>
-Output written on LaTeX2.pdf (8 pages, 503384 bytes).
+ 70i,11n,76p,228b,426s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
+/lm/lm-mathex.enc}{C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
+/lm/lm-ec.enc}{C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/
+lm-rm.enc}{C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-m
+athsy.enc}{C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-m
+athit.enc}<C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
+mbx10.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
+mbx12.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
+mex10.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
+mmi10.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
+mmi7.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+r10.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr
+7.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy1
+0.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7
+.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
+symbols/msbm10.pfb>
+Output written on LaTeX1.pdf (2 pages, 142596 bytes).
 PDF statistics:
- 131 PDF objects out of 1000 (max. 8388607)
+ 67 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
