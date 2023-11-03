@@ -109,13 +109,13 @@
 \end{equation*}
 
 \begin{equation*}
-\ln'(x) = \frac{1}{x}
+\ln'(x) = \frac{1}{x} \hspace{0.5em} (x>0) 
 \end{equation*}
 
 \section{Opération autour de la dérivation}
 
 \begin{thm}
-Soit $f$, $g$ : $ \mathbb{R} \rightarrow \mathbb{R}$ deux fonctions et $a\in \mathbb{R}$. On as les formules suivantes :
+Soit $f$, $g$ : $ \mathbb{R} \rightarrow \mathbb{R}$ deux fonctions \textbf{derivable} et $a\in \mathbb{R}$. On as les formules suivantes :
 \begin{enumerate}
 \item[(i)] \textbf{Formule de Leibnitz}
 \begin{equation*}
@@ -130,9 +130,9 @@ Soit $f$, $g$ : $ \mathbb{R} \rightarrow \mathbb{R}$ deux fonctions et $a\in \ma
 (f\circ g)'(x) = g'(x) \cdot f'(g(x))
 \end{equation*}
 
-\item[(iii)] \textbf{Dérivée de l'inverse}, on suppose $f$ est non nul.
+\item[(iii)] \textbf{Dérivée de l'inverse}, on suppose $f$ non nul.
 \begin{equation*}
-(\frac{1}{f})'(x) = -\frac{f'(x)}{f(x)^2}
+\big(\frac{1}{f}\big)'(x) = -\frac{f'(x)}{f(x)^2}
 \end{equation*}
 \end{enumerate}
 \end{thm}
@@ -158,7 +158,18 @@ f(x) = \frac{x^2 + 3}{1+x^4}
 
 \section{Les elements différentielles en physique}
 
-Montrons les formulles avec des outils intuitif. Commençons par le (ii). Si $x$ varie de $\Delta x$ alors on note $\Delta f$ la variation de $f$ entre $x$ et $x+\Delta x$. De même pour $g$ et $f+g$. On a alors : 
+On va utiliser des notations qui vont rendre le calcul plus simple et plus intuitif. 
+Si l'on se donne une fonction $f$ dérivable qui dépend d'une variable $x$, on notera $\Delta x$ une petite variation de $x$. Et ensuite on définit 
+\begin{equation*}
+\Delta f = f(x+\Delta x) - f(x)
+\end{equation*}
+la variation de $f$ entre $x$ et $x+\Delta x$, on alors par définition de la dérivée: 
+\begin{equation*}
+\frac{\Delta f}{\Delta x} = \frac{f(x+\Delta x)-f(x)}{(x+\Delta x) - x} \xrightarrow[\Delta x \to 0]{} f'(x)
+\end{equation*}
+
+Ceci justifie en partie la notation $\frac{df}{dx}$ où l'on voit $df$ comme une variation infinitésimale de $f$ sur un déplacement de $x$ à $x+dx$.
+\newline Commençons par montrer le (ii), on se donne $f$ et $g$ dérivable alors : 
 \begin{equation*}
 \begin{align*}
 \Delta(f + g) & = f(x+\Delta x) + g(x+\Delta x) -  (f(x) + g(x)) \\
@@ -166,12 +177,12 @@ Montrons les formulles avec des outils intuitif. Commençons par le (ii). Si $x$ 
 & = \Delta f + \Delta g 
 \end{align*}
 \end{equation*}
-en divisant par $dx$ des deux cotés :
+en divisant par $\Delta x$ des deux cotés :
 \begin{equation*}
 \frac{\Delta(f + g)}{\Delta x} = \frac{\Delta f}{\Delta x} + \frac{\Delta g}{\Delta x} 
 \end{equation*}
 
-en prennant la limite quand $\Delta x$ tend vers $0$ on obtient : 
+en prenant la limite quand $\Delta x$ tend vers $0$ on obtient : 
 \begin{equation*}(f + g)' (x) = f'(x) + g'(x)\end{equation*}
 
 Pour le (i)
@@ -184,10 +195,43 @@ Pour le (i)
 \frac{\Delta(fg)}{\Delta x} &= g(x)\frac{\Delta f}{\Delta x} + f(x)\frac{\Delta g}{\Delta x} + \frac{\Delta f \Delta g}{\Delta x}
 \end{align*}
 \end{equation*}
-Ici il faut comprendre que dans la dérivé, seules les termes <<d'ordre 1>> compte, c'est à dire ceux qui n'ont qu'un seule $d$ au numérateur. Autrement on peut vérifier que Le terme $\frac{\Delta f \Delta g}{\Delta x}$ tend vers 0. On trouve donc finalement : 
+Ici il faut comprendre que dans la dérivée, seuls les termes <<d'ordre 1>> compte, c'est-à-dire ceux qui n'ont qu'un seule $\Delta$ au numérateur. Autrement dit le terme $\frac{\Delta f \Delta g}{\Delta x}$ tend vers 0. En effet : 
+\begin{equation*}
+\frac{\Delta f \Delta g}{\Delta x} = \frac{\Delta f}{\Delta x} \Delta g \xrightarrow[\Delta x \to 0]{} f'(x) \cdot \lim_{\Delta x \to 0}\Delta g
+\end{equation*}
+Et par continuité de $g$ : 
+\begin{equation*}
+\Delta g = g(x+\Delta x) - g(x) \xrightarrow[\Delta x \to 0]{} g(x)-g(x) = 0
+\end{equation*}
+On trouve donc finalement : 
 \begin{equation*}
 (fg)'(x) = g(x)f'(x) + f(x)g'(x)
 \end{equation*}
 
+\subsection{Un peu de BlaBla}
+Revenons un peu à la physique. Et posons-nous une question : qu'est que la vitesse ? La première intérprétation de la vitesse que l'on a c'est celle de la vitesse moyenne. Disons qu'un point matériel parcours $\Delta x$ mètres en $\Delta t$ seconds, alors sa vitesse moyenne est donnée par : 
+\begin{equation*}
+v_{\text{moyenne}} = \frac{\Delta x}{\Delta t}
+\end{equation*}
+Mais cette quantité ne reflète pas réelement la notion de vitesse. En effet entre $t$ et $\Delta t$ la vitesse du point matèriel peut très bien varriée, elle n'est pas forcément toujours égale à sa valeur moyenne. Pour cela on définit \textbf{la vitesse instantanée} $v$ que l'on appelle juste vitesse comme :
+\begin{equation*}
+v = \lim_{\Delta x\to 0} \frac{\Delta x}{\Delta t} = x'(t)
+\end{equation*}
 
+Ici on considère le cas unidimensionnelle (le point ne ce déplace que dans une direction). Mais ceci est identique pour un point materiel qui ce déplace dans un espace à trois dimensions. Dans ce cas le déplacement est un vecteur $\Delta \vec{p}$ :
+\begin{equation*}
+\Delta \vec{p} = (\Delta x )\vec{u_x}+(\Delta y )\vec{u_y}+(\Delta z )\vec{u_z}
+\end{equation*}
+Qui est simplement la sommes des déplacements dans chaques directions décomposé sur les vecteurs de la base unitaire de $\mathbb{R}^3$. Et donc en divisant par $\Delta t$ : 
+\begin{equation*}
+\frac{\Delta \vec{p}}{\Delta t} = \frac{\Delta x }{\Delta t}\vec{u_x}+\frac{\Delta y }{\Delta t}\vec{u_y}+\frac{\Delta z }{\Delta t}\vec{u_z}
+\end{equation*}
+Si on passe à la limite quand $\Delta t\to 0$ : 
+\begin{equation*}
+\vec{v}(t) = \frac{d\vec{p}}{dt}(t) = \frac{dx }{d t}(t)\vec{u_x}+\frac{d y }{dt}(t)\vec{u_y}+\frac{d z }{d t}(t)\vec{u_z}
+\end{equation*}
+Où encore avec l'écriture <<mathématique>> :
+\begin{equation*}
+\vec{v}(t) = \big(\vec{p}\big)' (t) = x'(t)\vec{u_x}+ y'(t)\vec{u_y}+z'(t)\vec{u_z}
+\end{equation*}
 \end{document}

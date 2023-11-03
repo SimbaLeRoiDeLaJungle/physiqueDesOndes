@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.2.11)  2 NOV 2023 13:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.2.11)  3 NOV 2023 12:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -562,19 +562,6 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 95
 (C:\Users\mathi\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-
-! Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.167 \end{align*}
-                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 [1
 
 {C:/Users/mathi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
@@ -586,39 +573,52 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.185 \end{align*}
+l.178 \end{align*}
                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[2] (LaTeX1.aux) ) 
+
+! Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.196 \end{align*}
+                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[2] [3] (LaTeX1.aux) ) 
 Here is how much of TeX's memory you used:
- 5751 strings out of 475385
- 93523 string characters out of 2776907
- 435555 words of memory out of 3000000
- 27018 multiletter control sequences out of 15000+600000
- 502222 words of font info for 55 fonts, out of 8000000 for 9000
+ 5755 strings out of 475385
+ 93573 string characters out of 2776907
+ 440555 words of memory out of 3000000
+ 27022 multiletter control sequences out of 15000+600000
+ 508219 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,11n,76p,291b,426s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
+ 70i,11n,76p,352b,426s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/enc/d
+vips/lm/lm-ec.enc}{C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
 /lm/lm-mathex.enc}{C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
-/lm/lm-ec.enc}{C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/
-lm-rm.enc}{C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-m
-athsy.enc}{C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-m
-athit.enc}<C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
-mbx10.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
-mbx12.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
-mex10.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
-mmi10.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
-mmi7.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
-r10.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr
-7.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy1
-0.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7
-.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-symbols/msbm10.pfb>
-Output written on LaTeX1.pdf (2 pages, 143439 bytes).
+/lm/lm-rm.enc}{C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/
+lm-mathsy.enc}{C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/
+lm-mathit.enc}<C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmbx10.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmbx12.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmex10.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmmi10.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmmi7.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
+m/lmr10.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmr7.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
+msy10.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
+msy7.pfb><C:/Users/mathi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/symbols/msbm10.pfb>
+Output written on LaTeX1.pdf (3 pages, 155466 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
+ 73 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
